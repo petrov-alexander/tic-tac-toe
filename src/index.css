@@ -1,0 +1,162 @@
+* {
+    background-color: rgb(245, 245, 245);
+    font-family: 'Varela Round', sans-serif;
+    color: #006363;
+    font-size: 4vh;
+}
+
+.page {
+    width: 48vh;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16vh auto;
+}
+
+.header {
+    height: 4vh;
+}
+.header div{
+    height: 4vh;
+    position: relative;
+}
+
+.header div:nth-child(2) {
+    top: -4vh;
+}
+
+.header div:nth-child(3) {
+    top: -8vh;
+}
+
+.header span {
+    font-size: 5vh;
+}
+
+.cell-container {
+    width: 16vh;
+    height: 16vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cell-card {
+    width: 14vh;
+    height: 14vh;
+    line-height: 14.8vh;
+    text-align: center;
+    box-shadow: 0 0 2vh rgba(0, 0, 0, 0.3);
+    font-size: 10vh;
+    font-weight: 600;
+    border-radius: 1vh;
+    margin: auto;
+    transition: all 0.3s;
+}
+
+.cell-card:hover {
+    font-size: 8.6vh;
+    line-height: 13.8vh;
+    width: 12.8vh;
+    height: 12.8vh;
+    box-shadow: 0 0 1.6vh rgba(0, 0, 0, 0.5);
+}
+
+.cell-card.empty {
+    color: rgb(254, 254, 254);
+    transform: rotateX(180deg);
+}
+
+.cell-card:active.filled, .cell-card:active.win {
+    animation: shake 0.5s;
+}
+
+.reset-button {
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    transition: all 0.3s;
+    border: none;
+}
+
+button:focus {
+    outline:0;
+}
+
+button:hover {
+    font-size: 5vh;
+}
+
+.end-game-label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.end-game-label span{
+    font-size: 8vh;
+    font-weight: 800;
+}
+
+.invisible {
+    opacity: 0;
+    transition: all 0.6s;
+}
+
+.visible {
+    transition: all 0.6s;
+    opacity: 100%;
+}
+
+.board {
+    width: 48vh;
+    height: 48vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 4vh auto;
+}
+
+.gamerX {
+    color: #bd5253;
+}
+
+.gamerO {
+    color: #0e89b3;
+}
+
+@keyframes shake {
+    10% {
+        transform: translate(5px, 0px) rotate(4deg);
+    }
+    20% {
+        transform: translate(-5px, 0px) rotate(-4deg);
+    }
+    30% {
+        transform: translate(4px, 0px) rotate(3deg);
+    }
+    40% {
+        transform: translate(-4px, 0px) rotate(-3deg);
+    }
+    50% {
+        transform: translate(3px, 0px) rotate(2deg);
+    }
+    60% {
+        transform: translate(-3px, 0px) rotate(-2deg);
+    }
+    70% {
+        transform: translate(2px, 0px) rotate(1deg);
+    }
+    80% {
+        transform: translate(-2px, 0px) rotate(-1deg);
+    }
+    90% {
+        transform: translate(1px, 0px) rotate(0deg);
+    }
+    100% {
+        transform: translate(-1px, 0px) rotate(0deg);
+    }
+}
